@@ -1,0 +1,3 @@
+train: /content/drive/MyDrive/HackByte_Dataset/data/separated_dataset/FireExtinguisher/images
+val: /content/drive/MyDrive/HackByte_Dataset/data/separated_dataset/FireExtinguisher/images
+names: [FireExtinguisher]

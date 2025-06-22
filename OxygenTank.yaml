@@ -1,0 +1,3 @@
+train: /content/drive/MyDrive/HackByte_Dataset/data/separated_dataset/OxygenTank/images
+val: /content/drive/MyDrive/HackByte_Dataset/data/separated_dataset/OxygenTank/images
+names: [OxygenTank]
