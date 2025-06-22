@@ -11,7 +11,7 @@ This project implements a multi-class object detection system specifically desig
 - **ToolBox**  
 - **OxygenTank** 
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 Object-Detection-Station/
@@ -35,7 +35,7 @@ Object-Detection-Station/
 └── classes.txt                # Class names file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Environment Setup
 
@@ -158,7 +158,7 @@ color_map = {
 }
 ```
 
-## 📊 Expected Dataset Structure
+## Expected Dataset Structure
 
 Your dataset should follow this structure:
 
