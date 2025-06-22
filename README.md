@@ -2,14 +2,14 @@
 
 A comprehensive object detection system using YOLOv8 for detecting safety equipment including Fire Extinguishers, Tool Boxes, and Oxygen Tanks. This project includes dataset preparation, model training utilities, and ensemble detection capabilities.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a multi-class object detection system specifically designed for safety equipment detection in industrial or emergency settings. The system uses YOLOv8 architecture and supports both individual class training and ensemble detection.
 
 ### Detected Classes
-- **FireExtinguisher** 🧯
-- **ToolBox** 🧰  
-- **OxygenTank** 🫁
+- **FireExtinguisher** 
+- **ToolBox**  
+- **OxygenTank** 
 
 ## 🏗️ Project Structure
 
@@ -85,13 +85,13 @@ Train individual models for each class:
 conda activate EDU
 
 # Train FireExtinguisher model
-yolo detect train data=data/separated_dataset/FireExtinguisher/FireExtinguisher.yaml model=yolov8n.pt epochs=100 imgsz=640
+yolo detect train data=data/separated_dataset/FireExtinguisher/FireExtinguisher.yaml model=yolov8s.pt epochs=100 imgsz=640
 
 # Train ToolBox model  
-yolo detect train data=data/separated_dataset/ToolBox/ToolBox.yaml model=yolov8n.pt epochs=100 imgsz=640
+yolo detect train data=data/separated_dataset/ToolBox/ToolBox.yaml model=yolov8s.pt epochs=100 imgsz=640
 
 # Train OxygenTank model
-yolo detect train data=data/separated_dataset/OxygenTank/OxygenTank.yaml model=yolov8n.pt epochs=100 imgsz=640
+yolo detect train data=data/separated_dataset/OxygenTank/OxygenTank.yaml model=yolov8s.pt epochs=100 imgsz=640
 ```
 
 ### 5. Run Ensemble Detection
@@ -104,7 +104,7 @@ python testing.py
 
 Results will be saved in `result_photos/` with bounding boxes and confidence scores.
 
-## 🛠️ Features
+## Features
 
 ### Dataset Management
 - **Automated Grouping**: Separates multi-class datasets into individual class folders
@@ -206,10 +206,6 @@ class_id center_x center_y width height
 4. Test thoroughly
 5. Submit a pull request
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 🆘 Troubleshooting
 
 ### Common Issues
@@ -238,4 +234,4 @@ For issues and questions:
 
 ---
 
-**Happy Detecting! 🎯**
+**Star this repository if you found it helpful!**
