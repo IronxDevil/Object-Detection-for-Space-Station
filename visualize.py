@@ -27,7 +27,6 @@ class YoloVisualizer:
         assert self.num_images > 0
         self.frame_index = 0
 
-
     def next_frame(self):
         self.frame_index += 1
         if self.frame_index >= self.num_images:

@@ -16,7 +16,6 @@ color_map = {
     'ToolBox': (255, 0, 0),
     'OxygenTank': (0, 0, 255)
 }
-
 # Input and output folders
 input_folder = 'test_images'
 output_folder = 'result_photos'
@@ -52,6 +51,7 @@ for img_name in image_files:
                             'box': [float(x) for x in box]
                         }
                         all_detections.append(det)
+                        
     # Draw all detections
     for det in all_detections:
         x1, y1, x2, y2 = map(int, det['box'])

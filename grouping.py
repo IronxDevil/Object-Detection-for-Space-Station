@@ -69,9 +69,7 @@ def process_split(split_name):
             shutil.copy(label_path, dest_label_path)
             
             print(f"✅ Copied {image_name} to {cls} class")
-
         processed_count += 1
-
     print(f"Processed {processed_count} files, skipped {skipped_count} files")
 
 # Run for test set
@@ -83,8 +81,6 @@ print(f"\n✅ All images and labels sorted into class folders in {OUTPUT_DIR}")
 for cls in CLASSES:
     cls_image_dir = os.path.join(OUTPUT_DIR, cls, "images")
     cls_label_dir = os.path.join(OUTPUT_DIR, cls, "labels")
-    
     image_count = len([f for f in os.listdir(cls_image_dir) if f.endswith('.png')])
     label_count = len([f for f in os.listdir(cls_label_dir) if f.endswith('.txt')])
-    
     print(f"{cls}: {image_count} images, {label_count} labels")

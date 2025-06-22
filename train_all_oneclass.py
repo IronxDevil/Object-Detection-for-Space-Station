@@ -2,11 +2,11 @@ import os
 from ultralytics import YOLO
 from tqdm import tqdm
 
-# List of classes (should match your dataset)
+# List of classes
 CLASSES = ["FireExtinguisher", "ToolBox", "OxygenTank"]
 BASE_DIR = "data/separated_dataset"
 
-# Training configuration (tailored for laptop/4GB VRAM)
+# Training configuration (tailored for windows laptop/4GB VRAM)
 TRAIN_ARGS = dict(
     model="yolov8s.pt",
     epochs=60,
@@ -42,7 +42,7 @@ if __name__ == "__main__":
         if not os.path.exists(yaml_path):
             print(f"❌ YAML not found for {class_name}, skipping.")
             continue
-        print(f"\n🚀 Training model for class: {class_name}")
+        print(f"\n Training model for class: {class_name}")
         model = YOLO(TRAIN_ARGS['model'])
         results = model.train(
             data=yaml_path,

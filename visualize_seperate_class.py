@@ -2,6 +2,7 @@ import os
 import cv2
 import argparse
 
+
 def visualize_one_class(class_folder):
     images_folder = os.path.join(class_folder, "images")
     labels_folder = os.path.join(class_folder, "labels")
@@ -44,6 +45,7 @@ def visualize_one_class(class_folder):
         elif key == ord('a'):
             idx = (idx - 1) % num_images
     cv2.destroyAllWindows()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Visualize one-class YOLO dataset.")
