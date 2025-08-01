@@ -24,6 +24,18 @@ This project presents an **Object Detection Model for Space Station** built for 
 
 ---
 
+## Application Demo & Use Case (click to see demo video, the best one is at the end)
+
+[![Watch the demo](https://img.youtube.com/vi/oeHpo3rIKeA/0.jpg)](https://youtu.be/oeHpo3rIKeA?feature=shared)
+
+[Watch on YouTube](https://youtu.be/oeHpo3rIKeA?feature=shared)
+
+[![Watch the demo](https://i.ytimg.com/vi/zKmHSGjJm9I/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCCafAeWvxHIEc3XeDN8gkzxa2FhQ)](https://www.youtube.com/watch?v=zKmHSGjJm9I&ab_channel=Stark)
+
+[Watch on YouTube (application demo)](https://www.youtube.com/watch?v=zKmHSGjJm9I&ab_channel=Stark)
+
+---
+
 ## Directory Structure
 
 ```
@@ -133,7 +145,7 @@ python realtime_detection.py
 
 ### 2. Video Detection
 
-- **Script:** Use `predict.py` or adapt `realtime_detection.py` for video files.
+- **Script:** Use `detect_in_video.py` for video files.
 - **Function:** Detect objects in video files and save annotated outputs.
 
 ### 3. Real-Time Detection
@@ -179,7 +191,7 @@ python realtime_detection.py
 
 ## Acknowledgements
 
-- **DualityAI** for organizing the hackathon and providing the dataset via their virtual digital twin simulator.
+- **DualityAI** for organizing the hackathon and providing the dataset via their virtual digital twin simulator Falcon.
 
 ---
 
