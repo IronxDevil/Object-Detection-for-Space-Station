@@ -1,0 +1,11 @@
+INFO:     Will watch for changes in these directories: ['/Users/sharique/Desktop/YOLO/safety-detection-app/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [45427] using StatReload
+INFO:     Started server process [45511]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58466 - "GET /docs HTTP/1.1" 200 OK
+
+0: 640x480 (no detections), 555.7ms
+Speed: 10.7ms preprocess, 555.7ms inference, 2.7ms postprocess per image at shape (1, 3, 640, 480)
+INFO:     127.0.0.1:58480 - "POST /detect HTTP/1.1" 200 OK
