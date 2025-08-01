@@ -10,3 +10,6 @@ IF ERRORLEVEL 1 (
 :: Create the environment
 echo Creating the Conda environment 'EDU' with Python 3.10...
 conda create --name EDU python=3.10 -y
+
+
+

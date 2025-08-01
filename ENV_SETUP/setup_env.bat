@@ -10,3 +10,4 @@ call install_packages.bat
 
 echo All tasks completed.
 pause
+

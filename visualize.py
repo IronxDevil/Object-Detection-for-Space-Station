@@ -1,12 +1,13 @@
 import os
 import cv2
 
+
 class YoloVisualizer:
     MODE_TRAIN = 0
     MODE_VAL = 1
     def __init__(self, dataset_folder):
         self.dataset_folder = dataset_folder
-        classes_file = os.path.join(os.path.dirname(__file__), "classes.txt")
+        classes_file = os.path.join(dataset_folder, "classes.txt")
         with open(classes_file, "r") as f:
             self.classes = f.read().splitlines()
         self.classes = {i: c for i, c in enumerate(self.classes)}
@@ -14,8 +15,8 @@ class YoloVisualizer:
     
     def set_mode(self, mode=MODE_TRAIN):
         if mode == self.MODE_TRAIN:
-            self.images_folder = os.path.join(self.dataset_folder, "test", "images")
-            self.labels_folder = os.path.join(self.dataset_folder, "test", "labels")
+            self.images_folder = os.path.join(self.dataset_folder, "train", "images")
+            self.labels_folder = os.path.join(self.dataset_folder, "train", "labels")
         else:
             self.images_folder = os.path.join(self.dataset_folder, "val", "images")
             self.labels_folder = os.path.join(self.dataset_folder, "val", "labels")
@@ -26,6 +27,7 @@ class YoloVisualizer:
         assert self.num_images == num_labels
         assert self.num_images > 0
         self.frame_index = 0
+
 
     def next_frame(self):
         self.frame_index += 1
@@ -77,6 +79,7 @@ class YoloVisualizer:
                 self.set_mode(YoloVisualizer.MODE_VAL)
         cv2.destroyAllWindows()
 
+
 if __name__ == "__main__":
-    vis = YoloVisualizer(os.path.join(os.path.dirname(__file__), "data"))
+    vis = YoloVisualizer(os.path.dirname(__file__))
     vis.run()

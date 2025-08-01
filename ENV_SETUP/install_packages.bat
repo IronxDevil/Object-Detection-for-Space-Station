@@ -24,3 +24,4 @@ conda install -c pytorch -c nvidia -c conda-forge pytorch torchvision pytorch-cu
 
 echo Environment setup complete. You can now run your code in the 'EDU' environment.
 pause
+
