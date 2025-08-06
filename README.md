@@ -47,7 +47,7 @@ YOLO/
 ├── safety-detection-app/
 │   ├── backend/
 │   │   └── main.py
-│   └── frontend/
+│   └── frontend2/
 │       └── src/
 │           ├── pages/
 │           └── App.jsx
@@ -72,8 +72,6 @@ YOLO/
 ├── Screenshot 2025-07-15 221436.png
 ├── train.py
 ├── predict.py
-├── resume_train.py
-├── visualize.py
 ├── classes.txt
 ├── yolo_params.yaml
 └── yolov8l.pt

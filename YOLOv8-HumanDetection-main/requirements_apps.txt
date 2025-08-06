@@ -1,0 +1,31 @@
+# Base Libraries
+numpy
+torch
+tqdm
+Pillow
+PyYAML
+scipy
+opencv-python
+matplotlib
+
+# Additional Libraries for Ultralytics
+torchvision
+scikit-learn
+
+# Additional Libraries for Roboflow
+requests
+python-magic
+pandas
+python-dotenv
+
+# Ultralytics
+ultralytics
+
+# Roboflow
+roboflow
+
+# Streamlit for web app
+streamlit
+
+# Additional dependencies for real-time detection
+argparse 

@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+/* Aquire Font Face Declarations */
+@font-face {
+  font-family: 'Aquire';
+  src: url('/fonts/Aquire-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('/fonts/Aquire-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('/fonts/Aquire-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Molgan Font Face Declaration */
+@font-face {
+  font-family: 'Molgan';
+  src: url('/fonts/Molgan-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Glafine Font Face Declaration */
+
+/* Enhanced Page Transition Effects */
+.aurafarming-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(120, 120, 255, 0.2), rgba(100, 50, 255, 0.1) 40%, transparent 70%);
+  mix-blend-mode: screen;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  filter: blur(8px);
+}
+
+.aurafarming-overlay.active {
+  opacity: 1;
+}
+
+/* Video-like transition overlay */
+.video-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 102;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(30, 30, 60, 0.3), rgba(10, 10, 30, 0.2));
+}
+
+.video-transition-overlay::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(circle at center, rgba(100, 100, 255, 0.2), transparent 70%);
+  mix-blend-mode: screen;
+  animation: pulse 4s infinite alternate;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.video-transition-overlay.active::before {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+@font-face {
+  font-family: 'Glafine';
+  src: url('/fonts/Glafine-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-heading: 'Aquire', sans-serif;
+  --font-body: 'Glafine', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+}
+
+/* Typography classes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+p, span, div, li, a, button, input, textarea {
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Molgan', 'Arial', sans-serif !important;
+}
+
+/* Molgan Font Class */
+.font-molgan {
+  font-family: 'Molgan', 'Arial', sans-serif !important;
+}
+
+/* Aquire Futuristic Font Styles */
+.font-necosmic {
+  font-family: 'Aquire', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.font-necosmic-subtitle {
+  font-family: 'Aquire', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* 3D Card Styles */
+.card-3d {
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.8));
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+}
+
+.card-3d:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* 3D Button Styles */
+.btn-3d {
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    0 6px 12px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.btn-3d:hover::before {
+  opacity: 1;
+}
+
+.btn-3d:active {
+  transform: translateY(0px);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rich 3D Button Variants */
+.btn-3d-primary {
+  background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 
+    0 8px 16px rgba(59, 130, 246, 0.3),
+    0 4px 8px rgba(29, 78, 216, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-3d-primary:hover {
+  box-shadow: 
+    0 12px 24px rgba(59, 130, 246, 0.4),
+    0 6px 12px rgba(29, 78, 216, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-3d-success {
+  background: linear-gradient(145deg, #10b981, #059669);
+  color: white;
+  box-shadow: 
+    0 8px 16px rgba(16, 185, 129, 0.3),
+    0 4px 8px rgba(5, 150, 105, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-3d-success:hover {
+  box-shadow: 
+    0 12px 24px rgba(16, 185, 129, 0.4),
+    0 6px 12px rgba(5, 150, 105, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.nightclub-card {
+  background: linear-gradient(135deg, #000000 0%, #2D3436 100%) !important;
+}
+
+.navbar-nightclub {
+  background: linear-gradient(135deg, #000000 0%, #2D3436 100%) !important;
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
