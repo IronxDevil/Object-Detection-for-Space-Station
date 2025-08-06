@@ -26,7 +26,7 @@ This project presents an **Object Detection Model for Space Station** built for 
 
 ## Application Demo & Use Case (click to see demo video, the best one is at the end)
 
-[![Watch the demo](https://img.youtube.com/vi/oeHpo3rIKeA/0.jpg)](https://youtu.be/oeHpo3rIKeA?feature=shared)
+[![Watch the demo](https://img.youtube.com/vi/oeHpo3rIKeA/0.jpg)](https://youtu.be/PFTzUkiizbU)
 
 [Watch on YouTube](https://youtu.be/oeHpo3rIKeA?feature=shared)
 
